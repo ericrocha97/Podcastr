@@ -1,12 +1,12 @@
-<h1 align="center">
-    <img alt="Podcastr" title="Podcastr" src=".github/podcastr.svg" />
-</h1>
+<p align="center">
+  <img alt="Podcastr" src=".github/icon.svg" width="160px">
+</p>
 
 <p align="center">
   <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#layout">Layout</a>
 </p>
 
 <p align="center">
@@ -17,9 +17,11 @@
 
 <br>
 
-<p align="center">
-  <img alt="Podcastr" src=".github/icon.svg" width="160px">
-</p>
+<h1 align="center">
+    <img alt="Podcastr" title="Podcastr" src=".github/podcastr.svg" />
+</h1>
+
+---
 
 ## 🧪 Technologies
 
