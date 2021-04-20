@@ -3,6 +3,13 @@
 </h1>
 
 <p align="center">
+  <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#getting-started">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/github/forks/ericrocha97/Podcastr?color=6F48C9" alt="Forks">     
 
   <img src="https://img.shields.io/github/stars/ericrocha97/Podcastr?color=6F48C9" alt="Stars">
