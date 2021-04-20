@@ -10,9 +10,9 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/forks/ericrocha97/Podcastr?color=6F48C9" alt="Forks">     
+  <img src="https://img.shields.io/github/forks/ericrocha97/Podcastr?label=forks&message=MIT&color=5965E0&labelColor=121214" alt="Forks">     
 
-  <img src="https://img.shields.io/github/stars/ericrocha97/Podcastr?color=6F48C9" alt="Stars">
+  <img src="https://img.shields.io/github/stars/ericrocha97/Podcastr?label=stars&message=MIT&color=5965E0&labelColor=121214" alt="Stars">
 </p>
 
 <br>
