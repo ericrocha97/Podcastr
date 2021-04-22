@@ -19,4 +19,10 @@
     margin-left: auto;
     text-transform: capitalize;
   }
+  img{
+    transition: filter 0.2s;
+    &:hover {
+      filter: brightness(1.2);
+    }
+  }
 }
