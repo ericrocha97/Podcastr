@@ -77,19 +77,6 @@
         "type": "audio/mpeg",
         "duration": 5700
       }
-    },
-    {
-      "id": "vald28-fin",
-      "title": "Valdir 28 - Polarização",
-      "members": "André, Tatá, Pera e Pitty",
-      "published_at": "2019-12-24 13:00:00",
-      "thumbnail": "https://i1.sndcdn.com/artworks-000657929404-b4xhou-t3000x3000.jpg",
-      "description": "<p>Temas que geram brigas no natal. Separam famílias. Fazem amigos de anos virarem inimigos em minutos. Os temas que assolaram o Brasil em 2019. É isso que vamos discutir no episódio de hoje.</p>",
-      "file": {
-        "url": "https://cf-media.sndcdn.com/rSTU7BS3twUE.128.mp3?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL2NmLW1lZGlhLnNuZGNkbi5jb20vclNUVTdCUzN0d1VFLjEyOC5tcDMiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MTkxMTgxODF9fX1dfQ__&Signature=AThnyBF9CHE2Et--hdwbiZox8sPf2lpkH5~Wf8UkBFbYwgwdh3vHn5gvZ5Yu7Ta8Kc4AoPz~rbWHY8QKm48g-i~SukedLUEx4PNLgHORl6Nyhjb8uNrsuaQr4O-Sr~vp~ck6SvgBAtkVhen4uTfV9GW-Dsf9sDD0Ir5tfvm86XlMlWwTlnWryhI44YAaD9RJ2nDdtkeOeGQn70xr~ZgofiNqq1C-5OzWVnKBurF8vZQzYyJuU2X9ulmpP9LmIUC4kMLNpu7p95ybSV7jGufFbg551LUINaWWyPGP7QLOz~zMSxr~CbFv7nQ9F3ZxEHhgAu-Mr6zJuulyjQfMWA2c8A__&Key-Pair-Id=APKAI6TU7MMXM5DG6EPQ",
-        "type": "audio/mpeg",
-        "duration": 6840
-      }
     }
   ]
 }
