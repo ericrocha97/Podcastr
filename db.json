@@ -64,19 +64,6 @@
         "type": "audio/mpeg",
         "duration": 5940
       }
-    },
-    {
-      "id": "valdir-29-isso-e-um-assalto",
-      "title": "Valdir 29 - Isso é um Assalto!",
-      "members": "André, Tatá, Pera e Pitty",
-      "published_at": "2020-03-06 13:00:00",
-      "thumbnail": "https://i1.sndcdn.com/artworks-aRdYRvR8ki6v7ibP-jnyU7g-t3000x3000.jpg",
-      "description": "<p>Uma das experiências mais típicas do brasileiro médio é o famoso &quot;assalto&quot; ou &quot;roubo&quot;, uma prática horrível já culturalmente indispensável no dia a dia do povo.</p>",
-      "file": {
-        "url": "https://cf-media.sndcdn.com/68mu99r7DaQe.128.mp3?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL2NmLW1lZGlhLnNuZGNkbi5jb20vNjhtdTk5cjdEYVFlLjEyOC5tcDMiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MTkxMTcwNTl9fX1dfQ__&Signature=R74ItcyVhYs~UkuT8n9f0aG~ffN~ROBpXWfp36U~0T4VdCmNkijnIj3-42g45pPnX8kNHJiysM0Og7IAiSGLc5e2WSAiMLfFWtAvI6IAWn-ZldJ5uc0GuaZaN95u78Ky8hD9S~ORSiOX4BlIoNf~NkW1a-5XAUBp5WvL0Mpn7gkS~z27Z~f5~~oEt1Mn3kRKJe-rj-WONodGsgTIFw0a~N~84aaDVDhgMORxE-zdj0YzPvYBjVP-GT5GLfQGItXMk1W3XNfYXdyEIMJtZmQJ6SwkKH6YptCS3wOxB61dR~MBHylyLBMhkgZbqA94CMwEayQ97ywjKlSmWrEN1GYu2w__&Key-Pair-Id=APKAI6TU7MMXM5DG6EPQ",
-        "type": "audio/mpeg",
-        "duration": 5700
-      }
     }
   ]
 }
