@@ -64,7 +64,7 @@
         "type": "audio/mpeg",
         "duration": 5940
       }
-    },
+    } /*,
     {
       "id": "valdir-29-isso-e-um-assalto",
       "title": "Valdir 29 - Isso é um Assalto!",
@@ -77,6 +77,136 @@
         "type": "audio/mpeg",
         "duration": 5700
       }
-    }
+    },
+    {
+      "id": "vald28-fin",
+      "title": "Valdir 28 - Polarização",
+      "members": "André, Tatá, Pera e Pitty",
+      "published_at": "2019-12-24 13:00:00",
+      "thumbnail": "https://i1.sndcdn.com/artworks-000657929404-b4xhou-t3000x3000.jpg",
+      "description": "<p>Temas que geram brigas no natal. Separam famílias. Fazem amigos de anos virarem inimigos em minutos. Os temas que assolaram o Brasil em 2019. É isso que vamos discutir no episódio de hoje.</p>",
+      "file": {
+        "url": "https://cf-media.sndcdn.com/rSTU7BS3twUE.128.mp3?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL2NmLW1lZGlhLnNuZGNkbi5jb20vclNUVTdCUzN0d1VFLjEyOC5tcDMiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MTkxMTgxODF9fX1dfQ__&Signature=AThnyBF9CHE2Et--hdwbiZox8sPf2lpkH5~Wf8UkBFbYwgwdh3vHn5gvZ5Yu7Ta8Kc4AoPz~rbWHY8QKm48g-i~SukedLUEx4PNLgHORl6Nyhjb8uNrsuaQr4O-Sr~vp~ck6SvgBAtkVhen4uTfV9GW-Dsf9sDD0Ir5tfvm86XlMlWwTlnWryhI44YAaD9RJ2nDdtkeOeGQn70xr~ZgofiNqq1C-5OzWVnKBurF8vZQzYyJuU2X9ulmpP9LmIUC4kMLNpu7p95ybSV7jGufFbg551LUINaWWyPGP7QLOz~zMSxr~CbFv7nQ9F3ZxEHhgAu-Mr6zJuulyjQfMWA2c8A__&Key-Pair-Id=APKAI6TU7MMXM5DG6EPQ",
+        "type": "audio/mpeg",
+        "duration": 6840
+      }
+    },
+    {
+      "id": "valdir-27-fezes",
+      "title": "Valdir 27 - Fezes",
+      "members": "André, Tatá, Pera e Pitty",
+      "published_at": "2019-10-28 13:00:00",
+      "thumbnail": "https://i1.sndcdn.com/artworks-000624057301-b5zblj-t3000x3000.jpg",
+      "description": "<p>Dor de barriga. Pontadas no ânus. Um demônio fecal querendo se libertar de seus interiores.</p> <p>Hoje vamos contar algumas histórias de nossas brigas e derrotas contra as fezes, e discutir um pouco sobre bolos fecais de todos as formas, consistências e sabores.</p>",
+      "file": {
+        "url": "https://cf-media.sndcdn.com/wzWUVI9cZ8D7.128.mp3?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL2NmLW1lZGlhLnNuZGNkbi5jb20vd3pXVVZJOWNaOEQ3LjEyOC5tcDMiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MTkxMTY0OTd9fX1dfQ__&Signature=fpug0-nEWdqSqBHmDg1e3IKcTpUGn8EqxR42vybPl-rPDjtmab2cWBPfrdx9BQB7cgV4N2V9edq3ut-FrtL8-ACdKy8LJghNZvdlI2OfoNkpAgnD2NEWvzxqsrYVy2~Q9CAf~0BzExGZ7-XiiFXrjPiHLEmcLdEajpy6nocAhgsJmPJTJRuebuDRTzaV8m4rOZcL2GqLbfkwEx7Odlk8p08w0v~AaimTzmT~kLuOQUtln9Es-sDxS~6xGikoogzb-s-37~xvnS1-OfdC1SZihk9daTHppgDx5MCCybueGkC0aDrXbPjU1VMFAUQjhKhqz7X-jg1p6KZqUKoA-jIL-w__&Key-Pair-Id=APKAI6TU7MMXM5DG6EPQ",
+        "type": "audio/mpeg",
+        "duration": 5160
+      }
+    },
+    {
+      "id": "valdir-26-pessoas-inconvenientes",
+      "title": "Valdir 26 - Pessoas Inconvenientes",
+      "members": "André, Tatá e Pera",
+      "published_at": "2019-09-25 13:00:00",
+      "thumbnail": "https://i1.sndcdn.com/artworks-000603201550-1n9hsk-t3000x3000.jpg",
+      "description": "<p>Antes da existência de uma internet aberta e generalizada, as crianças eram obrigadas a apreciar a televisão, assistindo muitos programas de cunho científico.</p> <p>Infelizmente nem sempre as informações passadas eram as mais confiáveis, mas fazer o que?</p>",
+      "file": {
+        "url": "https://cf-media.sndcdn.com/NKPPFFNnm6YA.128.mp3?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL2NmLW1lZGlhLnNuZGNkbi5jb20vTktQUEZGTm5tNllBLjEyOC5tcDMiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MTkxMTYzMzd9fX1dfQ__&Signature=AviZtm35cnZJUf4DjKr3OX31QtW0Eu8aey6lCol17mUPRyBRUnKI18dWRIHOvOfP4X0m6dFMmQLC1YH8wCkH-x37i7uIEpT5kPJDtscjfRu9NTChf3ffJ1IiwALfq4iIXK45lxHXA49OO7ubxm494dHkGavc~vHACRnGI6eN1rWGxS-W7uKoSl6ehsdzeTeHYNBS6R9JsrA89PP2GX0VXnorYudfK9LHdVr6kNNZpUFYLdXO1oAQrfxze8zkbC5OjojzBkhsnpZLNtDZnK-1DosdnzjW9XILYYaMvIzsktSxnG2YNtLUTED-CXU-E-6UXMsYwXTv5DRaA~h62kKFuQ__&Key-Pair-Id=APKAI6TU7MMXM5DG6EPQ",
+        "type": "audio/mpeg",
+        "duration": 5040
+      }
+    },
+    {
+      "id": "valdir-25-folclore-brasileiro",
+      "title": "Valdir 25 - Folclore Brasileiro",
+      "members": "André, Tatá, Pera, Pitty e Léo",
+      "published_at": "2019-09-02 13:00:00",
+      "thumbnail": "https://i1.sndcdn.com/artworks-000591654302-zmphx4-t3000x3000.jpg",
+      "description": "<p>O Folclore brasileiro foi inventado em 2001 pela Rede Globo, no seriado &quot;Sítio do Pica-pau Amarelo&quot;, e até hoje vem sendo ensinado para crianças como se fosse algo genuinamente brasileiro.</p> <p>Descubra a origem de algumas das piores histórias do nosso folclore nacional nesse episódio com muita alegria e desinformação.</p>",
+      "file": {
+        "url": "https://cf-media.sndcdn.com/0YKH20pZgiFF.128.mp3?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL2NmLW1lZGlhLnNuZGNkbi5jb20vMFlLSDIwcFpnaUZGLjEyOC5tcDMiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MTkxMTUwMDZ9fX1dfQ__&Signature=NyyXUWwq~UxOC-qWgC0UYQxc-ixtl4m4zcYxqo1oyqreZERmbuREQ7WQ3ocM61VT9CkTmG8U3CA6spcX4w3rXIiJxij6ksjyC4iUBZcgyGe-AFN-qXwY4a8QavvXCv7zR8Y6fV3s70H3~04PQJpuj6hTZx0HbKfSK16iE91KVB4~Eu98jcxpEkiuMjp7nR2ExK-ZzmXoxvFfEdIebRUJXOT9SFHg7BoYg1b8kmqSQc9B~XtFQizrkEX-i-8fd6DMyhaJii5laBRx46vKHB-Yho46~IDTOSXjtY0kKKdUPQCdAGhWGoknTikemo1Mpa~brzg8WgLW6GDx3-Rz34AYVw__&Key-Pair-Id=APKAI6TU7MMXM5DG6EPQ",
+        "type": "audio/mpeg",
+        "duration": 3720
+      }
+    },
+    {
+      "id": "valdir-24-bebidas-alcoolatras",
+      "title": "Valdir 24 - Bebidas Alcoólatras",
+      "members": "André, Tatá, Pera e Léo",
+      "published_at": "2019-08-05 13:00:00",
+      "thumbnail": "https://i1.sndcdn.com/artworks-000577801814-b7temr-t3000x3000.jpg",
+      "description": "<p>A vida não ta fácil pra ninguém, por isso um dos pilares mais sólidos da familia brasileira é a bebida.</p> <p>Hoje vamos discutir seus vários tipos e sabores, e contar alguns causos vergonhosos de nosso infância alcoólatra.</p>",
+      "file": {
+        "url": "https://cf-media.sndcdn.com/RdPanoDahxqG.128.mp3?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL2NmLW1lZGlhLnNuZGNkbi5jb20vUmRQYW5vRGFoeHFHLjEyOC5tcDMiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MTkxMTUyMTN9fX1dfQ__&Signature=E5TnHXpKDaAYzsOqaKBJUa3QxQ7QL~sOx-VRvYEE2igi4eFs1EQHyVF5mzHKFGalIrv4Hkvog7gdEy2ChxbpjVyYzhf8q-vXow6D0T-qKkuo~imQuzV2ErA3cpslRtYutaVDM4S4ufT~UwkCJKwvkgT~gq633YuyBe8bsAbk5Uoao6026omEQ3cm2zAGmOjKHcIMXUgJtgEp3L~gRcGmeVAZZxT4nBigmRukEQDZCKe5GvGe67OrZKlpz6Q4x56M8NfANqw93e8LrGSg59T~qNgoNhTDx3s5ODHTCrl1r~mYVw64urhgFRzXUe6dulgLGe5zv1qA3t4qks1W2PDX-g__&Key-Pair-Id=APKAI6TU7MMXM5DG6EPQ",
+        "type": "audio/mpeg",
+        "duration": 3960
+      }
+    },
+    {
+      "id": "valdir-23-historia-do-mundo-parte-1",
+      "title": "Valdir 23 - História do Mundo (Parte 1)",
+      "members": "André, Tatá, Pera, Pitty e Léo",
+      "published_at": "2019-07-11 13:00:00",
+      "thumbnail": "https://i1.sndcdn.com/artworks-000564928187-mjy37n-t3000x3000.jpg",
+      "description": "<p>Hoje te levamos por um passei na história da humanidade, compartilhando todo o conhecimento popular que temos sobre cada era ja vivida por nós, começando na idade das pedras, passando pela Babilônia, Egito e terminando hoje na Grécia antiga.</p>",
+      "file": {
+        "url": "https://cf-media.sndcdn.com/cs9qom4uB2EL.128.mp3?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL2NmLW1lZGlhLnNuZGNkbi5jb20vY3M5cW9tNHVCMkVMLjEyOC5tcDMiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MTkxMTUyMDZ9fX1dfQ__&Signature=bXUu~C-qaHzwSuoAFwZQdJ9wbY3pTX9w7pzyHhDDK4JoRrYSxmM1Ehvr9-3tMTiCSw81LdpTygZce57UHNgSPsBO4LP4GlSMGnpjy4TsAo6qs08W-iVvbQ7o1OERyS-wYQ-GVaoO98SuCVOwajebdVZYOvd6Gn1iSqWQ~B3P0a2eBetcV5IsNaA0p9b2pRz3PMVZ7M3wS38EKY7S56BTPI9f6f4z3-6GJ4g-2XfKqjer5pYV8VNyQcBtIV90EjNzuzQ2gESjKBA59J3iEKB8~FZwlP9zoaB8R~1nGWEhrTOjGXrfe3ar4drNbYIFwMfRg2MhBG2lKc4Kj4WC0eiCDw__&Key-Pair-Id=APKAI6TU7MMXM5DG6EPQ",
+        "type": "audio/mpeg",
+        "duration": 3960
+      }
+    },
+    {
+      "id": "valdir-22-festa-junina-e-suas-emboscadas",
+      "title": "Valdir 22 - Festa Junina e suas emboscadas",
+      "members": "André, Tatá, Pera e Pitty",
+      "published_at": "2019-06-29 13:00:00",
+      "thumbnail": "https://i1.sndcdn.com/artworks-000559296735-drq3d8-t3000x3000.jpg",
+      "description": "<p>Festa junina, grande época do ano pra se divertir, cultivar amizades, comer comida boa, e ser ludibriado. CUIDADO! Quermesses foram feitas pra arrancar todo seu dinheiro.</p>",
+      "file": {
+        "url": "https://cf-media.sndcdn.com/fajDYvRZjVU5.128.mp3?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL2NmLW1lZGlhLnNuZGNkbi5jb20vZmFqRFl2UlpqVlU1LjEyOC5tcDMiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MTkxMTUwMzZ9fX1dfQ__&Signature=JImhh-B8Il1CYWghdHY1enDKHu1CN4bhWmpsNPfOzPJjL2NGOKjXE54AW2JnCyMbyIPzIpoawA8MjEWET152jRgdsMTUSKtEcZCLgXn3QG539Rl29SadPar1yfowzyArM9jrCsjV96XRyZZtraQ1k5rPL1uytRWdPY-d4o-z1RDKzUcCske58CWrPWyV1D5Fnfv3eb93Q3WpKkNCsGE~puegG4rVaF8qdiBzE3UT1-ZpR3tV-pMIEAuin1QY5z0BJw-Gp--xn8pmOHrpObF0cncUNpoYiCUTbIHTxgoQCXVEkO~fX1HywmeZa7mtEhQJ5TCIKFDfGtFyH3Fis4jlkw__&Key-Pair-Id=APKAI6TU7MMXM5DG6EPQ",
+        "type": "audio/mpeg",
+        "duration": 3780
+      }
+    },
+    {
+      "id": "e-mails-5-o-pior-ouvinte-do-valdir-e-esse-do-ultimo-e-mail",
+      "title": "E-mails 5 - O pior ouvinte do Valdir é esse do último e-mail",
+      "members": "André, Tatá, Pera, Pitty e Léo",
+      "published_at": "2019-06-11 13:00:00",
+      "thumbnail": "https://i1.sndcdn.com/artworks-000550512000-ajjw1q-t3000x3000.jpg",
+      "description": "<p>Mais uma vez estamos lendo os seus e-mails, e meus amigos... Mas que desgraça...</p>",
+      "file": {
+        "url": "https://cf-media.sndcdn.com/wRtCP8anUkYL.128.mp3?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL2NmLW1lZGlhLnNuZGNkbi5jb20vd1J0Q1A4YW5Va1lMLjEyOC5tcDMiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MTkxMTQwNDF9fX1dfQ__&Signature=FIoBRFuXz53Rn0KEOfPAtqqG~fPwEAIMPkCtkIjizg6l5lFaZbSFbJNcoWZVs9C2EWPXOAqS7MGHr877bhYBq6gLdD4SRtOhIvX1uT3Zhg~nDhTCjxjNNiAdWVyKp9LIKGjQQL~2Gmt6Bgr2zFoFLbnUdOUfr02jS20BsmJfMY-0IwLCqUBXMWhEPorqXyFWeFogKFP6IxuTQFtEz1YLYkhXQBrqrR7SJC3TDZxOTSEYg62zJwo8TPJn8BNg6KeZv3ApI0KetlmAys2BW4pjWGylywBNgIQGiSrGTJME628kB8lTRUBWnSaf1gWw5FRtJWQn-YvoywlHflDIbMN7qw__&Key-Pair-Id=APKAI6TU7MMXM5DG6EPQ",
+        "type": "audio/mpeg",
+        "duration": 2820
+      }
+    },
+    {
+      "id": "valdir-21-esportes-proibidos",
+      "title": "Valdir 21 - Esportes Proibidos",
+      "members": "André, Tatá, Pera, Pitty e Léo",
+      "published_at": "2019-05-29 13:00:00",
+      "thumbnail": "https://i1.sndcdn.com/artworks-000543348954-y89h9j-t3000x3000.jpg",
+      "description": "<p>Esportes convencionais já estão datados, e precisamos urgentemente de mudanças que façam com que o publico volte a se emocionar com esse segmento do entretenimento.</p> <p>Hoje nó propusemos a invenção de vários esportes, como a rinha de mendigo, futebol ancap, corrida de idosos e vários outros.</p>",
+      "file": {
+        "url": "https://cf-media.sndcdn.com/nnlgtijExNby.128.mp3?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL2NmLW1lZGlhLnNuZGNkbi5jb20vbm5sZ3RpakV4TmJ5LjEyOC5tcDMiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MTkxMTQ3NjZ9fX1dfQ__&Signature=E7AEs8CBZMk5mBCIziLIgikoibjEYmzxTwIIc8DpXlOLwBLmPeJ54V5kmuOz4y0nBCE6AnrWPinAo61jGd7VI9d5gN3nbOmfEiSRkfxzq6m5V2x42vMil-uqR8In8KR-iDV5vpnJRkcmZIXKKZAZZYkxkSG~hHcF0tMbz5i7hEkGlD13yOCqVv7bh7n~mSJxqVdCQgfVnxGvfuajXpHKukl0GQNuKGh2VWtztCQY3U3mCxuoWrhQTM4-HUOcSnSG~Zkkq8-c7buw2B7RPrfvPTgRAtIwGdNZZ3EnY10p~C29cUHYpjQXTcjy3Mpfcfft1PYyRAoCs~JfN7x-BzQuPw__&Key-Pair-Id=APKAI6TU7MMXM5DG6EPQ",
+        "type": "audio/mpeg",
+        "duration": 3600
+      }
+    },
+    {
+      "id": "valdir-20-metendo-o-pau-em-coaching",
+      "title": "Valdir 20 - Metendo o pau em Coaching",
+      "members": "André, Tatá e Pera",
+      "published_at": "2019-05-11 13:00:00",
+      "thumbnail": "https://i1.sndcdn.com/artworks-000533307021-vmr6be-t3000x3000.jpg",
+      "description": "<p>Ja pensou em ter uma profissão ensinando os outros a terem uma profissão sem nunca ter tido uma profissão antes? Várias pessoas já, e ganham muito dinheiro com isso. Bem-vindo ao universo do Coaching, onde você consegue desafiar a física quântica e fazer mutações no seu próprio DNA.</p>",
+      "file": {
+        "url": "https://cf-media.sndcdn.com/lvSp0gLZ8Tl2.128.mp3?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL2NmLW1lZGlhLnNuZGNkbi5jb20vbHZTcDBnTFo4VGwyLjEyOC5tcDMiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2MTkxMTQ3ODZ9fX1dfQ__&Signature=QSv3US6PipPrsUa96w9hB2tOo66hb1unRWArYTUx9R15JlqoDpQViZp0vRKhBozXhr55RiXmqHrux7HnTKoTF1B5ZX4nwNa1v2ivqnHL5CDKm7Oo-DyZtY456uzRLkpPZ6UCUBIYhb96qi7CyWv3ZvVlWz9l4Yl~te6Xjoxlwf-qAXT8ssECreeHBNe05Ijpy26BDOyKtjSRLaT5wpQbKr79wdfmHdwb6uoyxIeiz9LPgY5lki9j2GunOrviypX58wCGJdX7Sh6sPKv8EJb6UVm-H2QBkGa4CCAqyenPDhIZf0iTPQcTVPyguoovnCGSPMx0BbPCxJgDtEvNr4bQDg__&Key-Pair-Id=APKAI6TU7MMXM5DG6EPQ",
+        "type": "audio/mpeg",
+        "duration": 3660
+      }
+    }*/
   ]
 }
