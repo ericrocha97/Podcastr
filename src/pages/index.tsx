@@ -10,6 +10,8 @@ import { convertDurationToTimeString } from '../utils/convertDurationToTimeStrin
 import { usePlayer } from '../contexts/PlayerContext';
 
 import styles from './home.module.scss';
+import axios from 'axios';
+import { substringGUID } from '../utils/substringGUID';
 
 type Episode = {
   id: string;
@@ -121,15 +123,42 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
   )
 }
 export const getStaticProps: GetStaticProps = async () => {
-  const { data } = await api.get('episodes', {
+  /*const { data } = await api.get('episodes', {
     params: {
       _limit: 50,
       _sort: 'published_at',
       _order: 'desc'
     }
-  });
+  });*/
+  /*const apiteste = axios.create({
+    baseURL: "https://feeds.soundcloud.com/users/soundcloud:users:533708286/sounds.rss"
+  });*/
+  const { data } = await axios.get(process.env.API_RSS)
 
-  const episodes = data.map(episode => {
+  //console.log(teste.data)
+
+  /*const xml = new XMLParser().parseFromString(teste.data);
+
+  console.log(xml)*/
+
+
+  const episodes = data.items.map(episode => {
+    return {
+      id: substringGUID(episode.guid),
+      title: episode.title,
+      thumbnail: episode.thumbnail,
+      members: "André, Tatá, Pera, Gio, Léo, Pitty",
+      publishedAt: format(parseISO(episode.pubDate), 'd MMM yy', { locale: ptBR }),
+      duration: Number(episode.enclosure.duration),
+      durationAsString: convertDurationToTimeString(Number(episode.enclosure.duration)),
+      url: episode.enclosure.link
+    }
+  })
+
+  //console.log(episodesTeste)
+
+
+  /*const episodes = data.map(episode => {
     return {
       id: episode.id,
       title: episode.title,
@@ -140,7 +169,10 @@ export const getStaticProps: GetStaticProps = async () => {
       durationAsString: convertDurationToTimeString(Number(episode.file.duration)),
       url: episode.file.url
     }
-  })
+  })*/
+
+  /*const latestEpisodes = episodes.slice(0, 2)
+  const allEpisodes = episodes.slice(2, episodes.length)*/
 
   const latestEpisodes = episodes.slice(0, 2)
   const allEpisodes = episodes.slice(2, episodes.length)

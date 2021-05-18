@@ -9,6 +9,8 @@ import { api } from '../../services/api'
 import { convertDurationToTimeString } from '../../utils/convertDurationToTimeString'
 
 import styles from './episode.module.scss';
+import axios from 'axios'
+import { substringGUID } from '../../utils/substringGUID'
 
 type Episode = {
   id: string;
@@ -65,18 +67,20 @@ export default function Episode({ episode }: EpisodeProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { data } = await api.get('episodes', {
+  /*const { data } = await api.get('episodes', {
     params: {
       _limit: 12,
       _sort: 'publised_at',
       _order: 'desc'
     }
-  });
+  });*/
 
-  const paths = data.map(episode => {
+  const { data } = await axios.get(process.env.API_RSS)
+
+  const paths = data.items.map(episode => {
     return {
       params: {
-        slug: episode.id
+        slug: substringGUID(episode.guid)
       }
     }
   })
@@ -90,7 +94,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticProps: GetStaticProps = async (ctx) => {
   const { slug } = ctx.params
 
-  const { data } = await api.get(`/episodes/${slug}`)
+  /*const { data } = await api.get(`/episodes/${slug}`)
 
   const episode = {
     id: data.id,
@@ -102,7 +106,27 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
     durationAsString: convertDurationToTimeString(Number(data.file.duration)),
     description: data.description,
     url: data.file.url
-  }
+  }*/
+
+  const { data } = await axios.get(process.env.API_RSS)
+
+  const episodes = data.items.map(item => {
+    return {
+      id: substringGUID(item.guid),
+      title: item.title,
+      thumbnail: item.thumbnail,
+      members: "André, Tatá, Pera, Gio, Léo, Pitty",
+      publishedAt: format(parseISO(item.pubDate), 'd MMM yy', { locale: ptBR }),
+      duration: Number(item.enclosure.duration),
+      durationAsString: convertDurationToTimeString(Number(item.enclosure.duration)),
+      description: item.description,
+      url: item.enclosure.link
+    }
+  })
+
+  const episodeArray = episodes.filter((item) => item.id === slug)
+  const episode = episodeArray[0];
+
 
   return {
     props: {
