@@ -1,10 +1,9 @@
 import { GetStaticProps } from 'next';
-import Image from 'next/image'
-import Link from 'next/link'
-import Head from 'next/head'
-import { format, parseISO } from 'date-fns'
-import ptBR from 'date-fns/locale/pt-BR'
-
+import Image from 'next/image';
+import Link from 'next/link';
+import Head from 'next/head';
+import { format, parseISO } from 'date-fns';
+import ptBR from 'date-fns/locale/pt-BR';
 import { api } from '../services/api';
 import { convertDurationToTimeString } from '../utils/convertDurationToTimeString';
 import { usePlayer } from '../contexts/PlayerContext';
@@ -25,20 +24,34 @@ type Episode = {
 }
 
 type HomeProps = {
-  latestEpisodes: Episode[]
-  allEpisodes: Episode[]
+  latestEpisodes: Episode[];
+  allEpisodes: Episode[];
 }
 
 export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
-  const { playList } = usePlayer()
+
+  const { playList, currentEpisodeIndex, isPlaying, togglePlay } = usePlayer();
+  //const { updateFavotireList, checkFavoriteItem } = useFavorite();
+
+  //const { changeLoaderTrue } = useLoader();
 
   const episodeList = [...latestEpisodes, ...allEpisodes];
 
+  const playButton = (episodeList, index) => {
+    if (currentEpisodeIndex === index && isPlaying) {
+      togglePlay();
+    } else {
+      playList(episodeList, index);
+    }
+  };
+
   return (
-    <div className={styles.homepage}>
+    <div className={styles.homePage}>
+
 
       <Head>
         <title>Home | Podcastr</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
       </Head>
 
       <section className={styles.latestEpisodes}>
@@ -48,13 +61,7 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
           {latestEpisodes.map((episode, index) => {
             return (
               <li key={episode.id}>
-                <Image
-                  width={192}
-                  height={192}
-                  src={episode.thumbnail}
-                  alt={episode.title}
-                  objectFit="cover"
-                />
+                <Image width={100} height={100} src={episode.thumbnail} alt={episode.title} objectFit="cover" className={styles.thumbImg} />
 
                 <div className={styles.episodeDetails}>
                   <Link href={`/episodes/${episode.id}`}>
@@ -63,10 +70,11 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
                   <p>{episode.members}</p>
                   <span>{episode.publishedAt}</span>
                   <span>{episode.durationAsString}</span>
+
                 </div>
 
-                <button type="button" onClick={() => playList(episodeList, index)}>
-                  <img src="/play-green.svg" alt="Tocar episódio" />
+                <button type="button" onClick={() => playButton(episodeList, index)}>
+                  <img src={currentEpisodeIndex === index && isPlaying ? "/pause-green.svg" : "/play-green.svg"} alt="Tocar episódio" />
                 </button>
               </li>
             )
@@ -75,12 +83,12 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
       </section>
 
       <section className={styles.allEpisodes}>
-        <h2>Todos episódios</h2>
+        <h2>Todos os episódios</h2>
 
         <table cellSpacing={0}>
           <thead>
             <tr>
-              <th colSpan={2}>Podcast</th>
+              <th colSpan={3}>Podcast</th>
               <th>Integrantes</th>
               <th>Data</th>
               <th>Duração</th>
@@ -91,7 +99,9 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
             {allEpisodes.map((episode, index) => {
               return (
                 <tr key={episode.id}>
-                  <td style={{ width: '5%' }}>
+                  <td>
+                  </td>
+                  <td>
                     <Image
                       width={120}
                       height={120}
@@ -100,17 +110,17 @@ export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
                       objectFit="cover"
                     />
                   </td>
-                  <td style={{ width: '45%' }}>
+                  <td>
                     <Link href={`/episodes/${episode.id}`}>
                       <a>{episode.title}</a>
                     </Link>
                   </td>
-                  <td style={{ width: '30%' }} className={styles.members}>{episode.members}</td>
-                  <td style={{ width: '10%' }}>{episode.publishedAt}</td>
-                  <td style={{ width: '10%' }}>{episode.durationAsString}</td>
-                  <td style={{ width: '20%' }}>
-                    <button type="button" onClick={() => playList(episodeList, index + latestEpisodes.length)}>
-                      <img src="/play-green.svg" alt="Tocar episódio" />
+                  <td><span>{episode.members}</span></td>
+                  <td style={{ width: 100 }}>{episode.publishedAt}</td>
+                  <td>{episode.durationAsString}</td>
+                  <td>
+                    <button type="button" onClick={() => playButton(episodeList, index + latestEpisodes.length)}>
+                      <img src={currentEpisodeIndex === index + latestEpisodes.length && isPlaying ? "/pause-green.svg" : "/play-green.svg"} alt="Tocar episódio" />
                     </button>
                   </td>
                 </tr>

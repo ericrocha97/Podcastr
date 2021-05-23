@@ -1,10 +1,9 @@
-import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
-import Slider from 'rc-slider';
-
-import 'rc-slider/assets/index.css';
-
 import { usePlayer } from '../../contexts/PlayerContext';
+import Image from 'next/image';
+
+import Slider from 'rc-slider';
+import 'rc-slider/assets/index.css';
 
 import styles from './styles.module.scss';
 import { convertDurationToTimeString } from '../../utils/convertDurationToTimeString';
@@ -13,7 +12,8 @@ export function Player() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [progress, setProgress] = useState(0)
 
-  const { episodeList,
+  const {
+    episodeList,
     currentEpisodeIndex,
     isPlaying,
     isLooping,
@@ -28,6 +28,8 @@ export function Player() {
     hasPrevious,
     clearPlayerState
   } = usePlayer()
+
+  const episode = episodeList[currentEpisodeIndex];
 
   useEffect(() => {
     if (!audioRef.current) return;
@@ -60,16 +62,15 @@ export function Player() {
     }
   }
 
-  const episode = episodeList[currentEpisodeIndex];
-
   return (
     <div className={styles.playerContainer}>
       <header>
         <img src="/playing.svg" alt="Tocando agora" />
-        <strong>Tocando agora</strong>
+        <strong className={styles.desktop}>Tocando agora</strong>
+        <strong className={styles.mobile}>Tocando agora {episode ? '- ' + episode.title : ''}</strong>
       </header>
 
-      { episode ? (
+      {episode ? (
         <div className={styles.currentEpisode}>
           <Image
             width={592}
@@ -89,6 +90,7 @@ export function Player() {
       <footer className={!episode ? styles.empty : ''}>
         <div className={styles.progress}>
           <span>{convertDurationToTimeString(progress)}</span>
+
           <div className={styles.slider}>
             {episode ? (
               <Slider
@@ -96,13 +98,14 @@ export function Player() {
                 value={progress}
                 onChange={handleSeek}
                 trackStyle={{ backgroundColor: '#04d361' }}
-                railStyle={{ background: '#9f75ff' }}
+                railStyle={{ backgroundColor: '#9f75ff' }}
                 handleStyle={{ borderColor: '#04d361', borderWidth: 4 }}
               />
             ) : (
               <div className={styles.emptySlider} />
             )}
           </div>
+
           <span>{convertDurationToTimeString(episode?.duration ?? 0)}</span>
         </div>
 
@@ -138,11 +141,15 @@ export function Player() {
             onClick={togglePlay}
           >
             {isPlaying
-              ? <img src="/pause.svg" alt="Pause" />
+              ? <img src="/pause.svg" alt="Pausar" />
               : <img src="/play.svg" alt="Tocar" />
             }
           </button>
-          <button type="button" onClick={playNext} disabled={!episode || !hasNext} >
+          <button
+            type="button"
+            onClick={playNext}
+            disabled={!episode || !hasNext}
+          >
             <img src="/play-next.svg" alt="Tocar próxima" />
           </button>
           <button

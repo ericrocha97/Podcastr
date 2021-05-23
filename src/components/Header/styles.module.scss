@@ -1,13 +1,21 @@
 .headerContainer {
-  background: var(--white);
+  background: var(--bg-header);
+  color: var(--color-header);
   height: 6.5rem;
-
   display: flex;
   align-items: center;
-
   padding: 2rem 4rem;
-
   border-bottom: 1px solid var(--gray-100);
+  width: 74%;
+
+  .logo {
+    cursor: pointer;
+    transition: opacity 0.3s;
+    
+    &:hover {
+        opacity: 0.7;
+    }
+}
 
   p {
     margin-left: 2rem;
@@ -15,14 +23,98 @@
     border-left: 1px solid var(--gray-100);
   }
 
+  @media(max-width: 1300px) {
+    p {
+        display: none;
+    }
+}
+
+@media(max-width: 900px) {
+    width: 100%;
+}
+
   span {
     margin-left: auto;
     text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    .toogleTheme {
+      display: block;
+      background-color: #ccc;
+      border-radius: 50px;
+      height: 22px;
+      width: 40px;
+      margin-right: 10px;
+      cursor: pointer;
+
+      span {
+          background-color: #fff;
+          height: 16px;
+          width: 16px;
+          border-radius: 50px;
+          position: relative;
+          top: 3px;
+          right: 19px;
+          transition: all 0.3s;
+      }
+
+      &.darkTheme {
+          background-color: #fff;
+
+          span {
+              right: 3px;
+              background-color: #111218;
+          }
+      }
   }
-  img{
-    transition: filter 0.2s;
-    &:hover {
-      filter: brightness(1.2);
+  }
+  @media(max-width: 620px) {
+    padding: 2rem;
+
+    span {
+        display: block;
+
+        .favBtn {
+            border: none;
+            margin: 20px 0 0 0;
+            padding: 0;
+        }
+        
+        .toogleTheme {
+            position: absolute;
+            right: 0px;
+            top: 30px;
+        }
+    }
+
+    .currentDate {
+        display: none;
+    }
+}
+
+@media(max-width: 480px) {
+    span {
+        display: block;
+
+        
+        .toogleTheme {
+            height: 16px;
+            width: 26px;
+            top: 35px;
+
+            span {
+                width: 10px;
+                height: 10px;
+
+                right: 13px;
+            }
+        }
+    }
+}
+
+@media(max-width: 360px) {
+    .logo {
+        width: 140px;
     }
   }
 }
