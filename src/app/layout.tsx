@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
+import { Header } from '@/components/header'
+import { Player } from '@/components/player'
+import { PlayerProvider } from '@/components/player-provider'
 import { ThemeProvider } from '@/components/theme-provider'
 
 const geistSans = Geist({
@@ -34,7 +37,15 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <PlayerProvider>
+            <div className="lg:flex lg:h-screen lg:overflow-hidden bg-background">
+              <div className="lg:flex-1 lg:flex lg:flex-col">
+                <Header />
+                {children}
+              </div>
+              <Player />
+            </div>
+          </PlayerProvider>
         </ThemeProvider>
       </body>
     </html>

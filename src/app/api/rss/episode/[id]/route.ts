@@ -4,9 +4,9 @@ import db from '../../../../../../db.json'
 
 export async function GET(
   _request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const requestedId = params.id
+  const { id: requestedId } = await params
 
   const { items } = db
   const foundItem = items.find(item => {

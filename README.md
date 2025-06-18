@@ -6,9 +6,9 @@
 - [x] pagina detalhe
 - [x] estilo
 - [x] chamadas api
-- [ ] criar componentes
-- [ ] player
-- [ ] navegação
+- [x] criar componentes
+- [x] player
+- [x] navegação
 - [ ] chamada api real
 - [ ] pwa
 - [ ] revisar código
