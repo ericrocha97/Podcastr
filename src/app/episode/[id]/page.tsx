@@ -1,21 +1,44 @@
 import { EpisodeDetails } from '@/components/episode-details'
 import { Button } from '@/components/ui/button'
+import type { Episode } from '@/types/episode'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 
 interface EpisodePageProps {
-  params: Promise<{
-    id: string
-  }>
+  params: Promise<{ id: string }>
+}
+
+export async function generateMetadata({
+  params,
+}: EpisodePageProps): Promise<Metadata> {
+  const { id } = await params
+  const episode = await getEpisodeData(id)
+
+  if (!episode) {
+    return {
+      title: 'Episódio não encontrado | Podcastr',
+      description:
+        'O episódio que você está procurando não existe ou foi removido.',
+    }
+  }
+
+  return {
+    title: `${episode.title} | Podcastr`,
+    description: episode.description.substring(0, 160),
+  }
 }
 
 async function getEpisodeData(id: string): Promise<Episode | null> {
   try {
-    const response = await fetch(
-      `http://localhost:3000/api/rss/episode/${id}`,
-      {
-        next: { revalidate: 60 * 60 * 24 }, // Revalidate once a day
-      }
-    )
+    const isServer = typeof window === 'undefined'
+    const baseUrl = isServer
+      ? (process.env.NEXT_PUBLIC_BASE_URL?.replace(/\/$/, '') ??
+        'http://localhost:3000')
+      : ''
+    const url = `${baseUrl}/api/rss/episode/${id}`
+    const response = await fetch(url, {
+      next: { revalidate: 60 * 60 * 24 }, // Revalidate once a day
+    })
 
     if (!response.ok) {
       if (response.status === 404) return null
@@ -30,7 +53,7 @@ async function getEpisodeData(id: string): Promise<Episode | null> {
   }
 }
 
-export default async function Page({ params }: Readonly<EpisodePageProps>) {
+export default async function Page({ params }: EpisodePageProps) {
   const { id } = await params
   const episode = await getEpisodeData(id)
 

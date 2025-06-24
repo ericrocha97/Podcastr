@@ -1,5 +1,6 @@
 'use client'
 
+import type { Episode } from '@/types/episode'
 import { convertDateString } from '@/utils/convert-date-string'
 import { convertDurationToTimeStringShort } from '@/utils/convert-duration-time-string'
 import { ChevronLeft } from 'lucide-react'
@@ -7,17 +8,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { EpisodePlayButton } from './episode-play-button'
 import { Button } from './ui/button'
-
-interface Episode {
-  id: string
-  title: string
-  host: string
-  image: string
-  date: string
-  duration: string
-  link: string
-  description: string
-}
 
 interface EpisodeDetailsProps {
   episode: Episode

@@ -1,5 +1,6 @@
 'use client'
 
+import type { Episode } from '@/types/episode'
 import { Play } from 'lucide-react'
 import { usePlayer } from './player-provider'
 import { Button } from './ui/button'

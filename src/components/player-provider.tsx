@@ -1,5 +1,6 @@
 'use client'
 
+import type { Episode } from '@/types/episode'
 import {
   type ReactNode,
   createContext,

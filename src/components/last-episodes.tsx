@@ -1,5 +1,6 @@
 'use client'
 
+import type { Episode } from '@/types/episode'
 import { convertDateString } from '@/utils/convert-date-string'
 import { convertDurationToTimeStringShort } from '@/utils/convert-duration-time-string'
 import { Play } from 'lucide-react'
