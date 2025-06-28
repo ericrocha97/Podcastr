@@ -1,6 +1,6 @@
 import { type NextRequest, NextResponse } from 'next/server';
 
-import { getAllEpisodes } from '@/lib/episodes';
+import { getEpisodeById } from '@/lib/episodes';
 
 export async function GET(
   _request: NextRequest,
@@ -8,8 +8,7 @@ export async function GET(
 ) {
   const id = (await params).id;
   try {
-    const allEpisodes = await getAllEpisodes();
-    const episode = allEpisodes.find((ep) => ep.id === id);
+    const episode = await getEpisodeById(id);
     if (!episode) {
       return NextResponse.json({ error: 'Episode not found' }, { status: 404 });
     }

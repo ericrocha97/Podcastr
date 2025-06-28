@@ -12,6 +12,22 @@ async function fetchEpisodes(): Promise<ApiEpisode[]> {
   return data.items as ApiEpisode[];
 }
 
+export async function getEpisodeById(id: string): Promise<Episode | null> {
+  const items = await fetchEpisodes();
+  const found = items.find((item) => convertGuidToId(item.guid) === id);
+  if (!found) return null;
+  return {
+    id,
+    title: found.title,
+    host: found.author,
+    image: found.thumbnail,
+    date: found.pubDate,
+    duration: found.enclosure.duration,
+    link: found.enclosure.link,
+    description: found.description ?? found.content ?? 'No description available.',
+  };
+}
+
 export async function getLatestEpisodes(): Promise<Episode[]> {
   const items = await fetchEpisodes();
   return items

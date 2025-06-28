@@ -1,4 +1,5 @@
 'use client';
+
 import {
   FastForward,
   Pause,
@@ -34,6 +35,20 @@ export function Player() {
   } = usePlayer();
 
   const episode = episodeList[currentEpisodeIndex];
+
+  useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
+    if ('mediaSession' in navigator && episode) {
+      navigator.mediaSession.metadata = new window.MediaMetadata({
+        title: episode.title,
+        artist: episode.host,
+        album: 'Podcastr',
+        artwork: [{ src: episode.image, sizes: '512x512', type: 'image/png' }],
+      });
+    }
+  }, [episode]);
 
   useEffect(() => {
     if (!audioRef.current) {
