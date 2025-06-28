@@ -1,13 +1,13 @@
-'use client'
+'use client';
 
-import type { Episode } from '@/types/episode'
-import { convertDateString } from '@/utils/convert-date-string'
-import { convertDurationToTimeStringShort } from '@/utils/convert-duration-time-string'
-import { Play } from 'lucide-react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { usePlayer } from './player-provider'
-import { Button } from './ui/button'
+import { Play } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import type { Episode } from '@/types/episode';
+import { convertDateString } from '@/utils/convert-date-string';
+import { convertDurationToTimeStringShort } from '@/utils/convert-duration-time-string';
+import { usePlayer } from './player-provider';
+import { Button } from './ui/button';
 import {
   Table,
   TableBody,
@@ -15,27 +15,28 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from './ui/table'
+} from './ui/table';
 
 interface AllEpisodesProps {
-  allEpisodes: Episode[]
+  allEpisodes: Episode[];
 }
 
 export function AllEpisodes({ allEpisodes }: Readonly<AllEpisodesProps>) {
-  const { play } = usePlayer()
+  const { play } = usePlayer();
 
   const handlePlay = (episode: Episode) => {
     if (!episode?.link) {
-      console.error('Episódio inválido:', episode)
-      return
+      //biome-ignore lint/suspicious/noConsole: console.error
+      console.error('Episódio inválido:', episode);
+      return;
     }
 
-    play(episode)
-  }
+    play(episode);
+  };
 
   return (
-    <section className="px-4 md:px-8 py-6">
-      <h2 className="text-xl font-semibold mb-4">Todos os episódios</h2>
+    <section className="px-4 py-6 md:px-8">
+      <h2 className="mb-4 font-semibold text-xl">Todos os episódios</h2>
 
       <Table>
         <TableHeader>
@@ -50,21 +51,21 @@ export function AllEpisodes({ allEpisodes }: Readonly<AllEpisodesProps>) {
         </TableHeader>
 
         <TableBody>
-          {allEpisodes.map(episode => (
-            <TableRow key={episode.id} className="hover:bg-muted/50">
+          {allEpisodes.map((episode) => (
+            <TableRow className="hover:bg-muted/50" key={episode.id}>
               <TableCell>
                 <Image
-                  src={episode.image}
                   alt={episode.title}
-                  width={64}
-                  height={64}
                   className="rounded object-cover"
+                  height={64}
+                  src={episode.image}
+                  width={64}
                 />
               </TableCell>
-              <TableCell className="font-medium break-words whitespace-normal max-w-xs">
+              <TableCell className="max-w-xs whitespace-normal break-words font-medium">
                 <Link
-                  href={`/episode/${episode.id}`}
                   className="hover:underline"
+                  href={`/episode/${episode.id}`}
                 >
                   {episode.title}
                 </Link>
@@ -80,12 +81,12 @@ export function AllEpisodes({ allEpisodes }: Readonly<AllEpisodesProps>) {
               </TableCell>
               <TableCell>
                 <Button
-                  variant="ghost"
-                  size="icon"
                   className="rounded-lg hover:bg-primary/20"
                   onClick={() => handlePlay(episode)}
+                  size="icon"
+                  variant="ghost"
                 >
-                  <Play className="w-4 h-4 text-primary" />
+                  <Play className="h-4 w-4 text-primary" />
                 </Button>
               </TableCell>
             </TableRow>
@@ -93,5 +94,5 @@ export function AllEpisodes({ allEpisodes }: Readonly<AllEpisodesProps>) {
         </TableBody>
       </Table>
     </section>
-  )
+  );
 }

@@ -1,130 +1,133 @@
-'use client'
+'use client';
 
-import type { Episode } from '@/types/episode'
 import {
-  type ReactNode,
   createContext,
+  type ReactNode,
   useCallback,
   useContext,
+  useMemo,
   useState,
-} from 'react'
-import { useMemo } from 'react'
+} from 'react';
+import type { Episode } from '@/types/episode';
 
 type PlayerContextData = {
-  episodeList: Episode[]
-  currentEpisodeIndex: number
-  isPlaying: boolean
-  hasNext: boolean
-  hasPrevious: boolean
-  play: (episode: Episode) => void
-  playList: (list: Episode[], startIndex?: number) => void
-  togglePlay: () => void
-  setPlayingState: (state: boolean) => void
-  playNext: () => void
-  playPrevious: () => void
-  clearPlayerState: () => void
-}
+  episodeList: Episode[];
+  currentEpisodeIndex: number;
+  isPlaying: boolean;
+  hasNext: boolean;
+  hasPrevious: boolean;
+  play: (episode: Episode) => void;
+  playList: (list: Episode[], startIndex?: number) => void;
+  togglePlay: () => void;
+  setPlayingState: (state: boolean) => void;
+  playNext: () => void;
+  playPrevious: () => void;
+  clearPlayerState: () => void;
+};
 
-const PlayerContext = createContext({} as PlayerContextData)
+const PlayerContext = createContext({} as PlayerContextData);
 
 type PlayerProviderProps = Readonly<{
-  children: ReactNode
-}>
+  children: ReactNode;
+}>;
 
 export function PlayerProvider({ children }: PlayerProviderProps) {
-  const [episodeList, setEpisodeList] = useState<Episode[]>([])
-  const [currentEpisodeIndex, setCurrentEpisodeIndex] = useState(-1)
-  const [isPlaying, setIsPlaying] = useState(false)
+  const [episodeList, setEpisodeList] = useState<Episode[]>([]);
+  const [currentEpisodeIndex, setCurrentEpisodeIndex] = useState(-1);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const hasNext = useMemo(
     () => currentEpisodeIndex < episodeList.length - 1,
     [currentEpisodeIndex, episodeList.length]
-  )
+  );
 
   const hasPrevious = useMemo(
     () => currentEpisodeIndex > 0,
     [currentEpisodeIndex]
-  )
+  );
 
   const play = useCallback(
     (episode: Episode) => {
       if (!episode?.link) {
-        console.error('Episódio inválido:', episode)
-        return
+        //biome-ignore lint/suspicious/noConsole: console.error
+        console.error('Episódio inválido:', episode);
+        return;
       }
 
-      const episodeIndex = episodeList.findIndex(ep => ep.id === episode.id)
+      const episodeIndex = episodeList.findIndex((ep) => ep.id === episode.id);
 
       if (episodeIndex === currentEpisodeIndex && isPlaying) {
-        setIsPlaying(false)
-        return
+        setIsPlaying(false);
+        return;
       }
 
-      let newEpisodeList = [...episodeList]
-      let newIndex = -1
+      let newEpisodeList = [...episodeList];
+      let newIndex = -1;
 
       if (episodeIndex !== -1) {
-        newEpisodeList = newEpisodeList.filter(ep => ep.id !== episode.id)
+        newEpisodeList = newEpisodeList.filter((ep) => ep.id !== episode.id);
       }
 
-      newEpisodeList.push(episode)
-      newIndex = newEpisodeList.length - 1
+      newEpisodeList.push(episode);
+      newIndex = newEpisodeList.length - 1;
 
-      setEpisodeList(newEpisodeList)
-      setCurrentEpisodeIndex(newIndex)
-      setIsPlaying(true)
+      setEpisodeList(newEpisodeList);
+      setCurrentEpisodeIndex(newIndex);
+      setIsPlaying(true);
     },
     [currentEpisodeIndex, episodeList, isPlaying]
-  )
+  );
 
   const playList = useCallback((list: Episode[], startIndex = 0) => {
     if (!list?.length) {
-      console.error('Lista de episódios vazia')
-      return
+      //biome-ignore lint/suspicious/noConsole: console.error
+      console.error('Lista de episódios vazia');
+      return;
     }
 
-    const validEpisodes = list.filter(episode => episode?.link)
+    const validEpisodes = list.filter((episode) => episode?.link);
 
     if (!validEpisodes.length) {
-      console.error('Nenhum episódio válido na lista')
-      return
+      //biome-ignore lint/suspicious/noConsole: console.error
+      console.error('Nenhum episódio válido na lista');
+      return;
     }
 
     const validIndex = Math.max(
       0,
       Math.min(startIndex, validEpisodes.length - 1)
-    )
+    );
 
-    setEpisodeList(validEpisodes)
-    setCurrentEpisodeIndex(validIndex)
-    setIsPlaying(true)
-  }, [])
+    setEpisodeList(validEpisodes);
+    setCurrentEpisodeIndex(validIndex);
+    setIsPlaying(true);
+  }, []);
 
   const togglePlay = useCallback(() => {
-    setIsPlaying(state => !state)
-  }, [])
+    setIsPlaying((state) => !state);
+  }, []);
 
   const setPlayingState = useCallback((state: boolean) => {
-    setIsPlaying(state)
-  }, [])
+    setIsPlaying(state);
+  }, []);
 
   const clearPlayerState = useCallback(() => {
-    setEpisodeList([])
-    setCurrentEpisodeIndex(-1)
-    setIsPlaying(false)
-  }, [])
+    setEpisodeList([]);
+    setCurrentEpisodeIndex(-1);
+    setIsPlaying(false);
+  }, []);
 
   const playNext = useCallback(() => {
     if (hasNext) {
-      setCurrentEpisodeIndex(currentEpisodeIndex + 1)
+      setCurrentEpisodeIndex(currentEpisodeIndex + 1);
     }
-  }, [currentEpisodeIndex, hasNext])
+  }, [currentEpisodeIndex, hasNext]);
 
   const playPrevious = useCallback(() => {
     if (hasPrevious) {
-      setCurrentEpisodeIndex(currentEpisodeIndex - 1)
+      setCurrentEpisodeIndex(currentEpisodeIndex - 1);
     }
-  }, [hasPrevious, currentEpisodeIndex])
+  }, [hasPrevious, currentEpisodeIndex]);
 
   const value = useMemo(
     () => ({
@@ -155,11 +158,11 @@ export function PlayerProvider({ children }: PlayerProviderProps) {
       playPrevious,
       clearPlayerState,
     ]
-  )
+  );
 
   return (
     <PlayerContext.Provider value={value}>{children}</PlayerContext.Provider>
-  )
+  );
 }
 
-export const usePlayer = () => useContext(PlayerContext)
+export const usePlayer = () => useContext(PlayerContext);

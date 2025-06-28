@@ -1,15 +1,15 @@
-'use client'
+'use client';
 
-import type { Episode } from '@/types/episode'
-import { Play } from 'lucide-react'
-import { usePlayer } from './player-provider'
-import { Button } from './ui/button'
+import { Play } from 'lucide-react';
+import type { Episode } from '@/types/episode';
+import { usePlayer } from './player-provider';
+import { Button } from './ui/button';
 
 interface EpisodePlayButtonProps {
-  episode: Episode
-  variant?: 'default' | 'secondary' | 'ghost'
-  size?: 'default' | 'sm' | 'lg' | 'icon'
-  className?: string
+  episode: Episode;
+  variant?: 'default' | 'secondary' | 'ghost';
+  size?: 'default' | 'sm' | 'lg' | 'icon';
+  className?: string;
 }
 
 export function EpisodePlayButton({
@@ -18,25 +18,26 @@ export function EpisodePlayButton({
   size = 'default',
   className,
 }: Readonly<EpisodePlayButtonProps>) {
-  const { playList } = usePlayer()
+  const { playList } = usePlayer();
 
   const handlePlay = () => {
     if (!episode?.link) {
-      console.error('Episódio inválido:', episode)
-      return
+      //biome-ignore lint/suspicious/noConsole: console.error
+      console.error('Episódio inválido:', episode);
+      return;
     }
-    playList([episode], 0)
-  }
+    playList([episode], 0);
+  };
 
   return (
     <Button
-      variant={variant}
-      size={size}
       className={className}
       onClick={handlePlay}
+      size={size}
+      variant={variant}
     >
-      <Play className="w-4 h-4 mr-2" />
+      <Play className="mr-2 h-4 w-4" />
       Tocar episódio
     </Button>
-  )
+  );
 }

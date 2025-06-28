@@ -1,33 +1,33 @@
-import type { ApiEpisode } from '@/types/api-episode'
-import { type NextRequest, NextResponse } from 'next/server'
+import { type NextRequest, NextResponse } from 'next/server';
+import type { ApiEpisode } from '@/types/api-episode';
+import { convertGuidToId } from '@/utils/convert-guid-to-id';
 
-export async function GET(req: NextRequest) {
-  const apiUrl = process.env.API_RSS
+export async function GET(_req: NextRequest) {
+  const apiUrl = process.env.API_RSS;
   if (!apiUrl) {
     return NextResponse.json(
       { error: 'API_RSS não definida no .env' },
       { status: 500 }
-    )
+    );
   }
 
   try {
-    const response = await fetch(apiUrl)
+    const response = await fetch(apiUrl);
     if (!response.ok) {
       return NextResponse.json(
         { error: 'Erro ao buscar dados da API RSS' },
         { status: 502 }
-      )
+      );
     }
-    const data = await response.json()
-    const { items } = data
+    const data = await response.json();
+    const { items } = data;
     const latestEpisodes = (items as ApiEpisode[])
       .toSorted(
         (a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime()
       )
       .slice(0, 3)
-      .map(item => {
-        const match = /[^/]+$/.exec(item.guid)
-        const id = match ? match[0] : item.guid
+      .map((item) => {
+        const id = convertGuidToId(item.guid);
         return {
           id,
           title: item.title,
@@ -38,14 +38,17 @@ export async function GET(req: NextRequest) {
           link: item.enclosure.link,
           description:
             item.description ?? item.content ?? 'No description available.',
-        }
-      })
-    return NextResponse.json({ latestEpisodes })
+        };
+      });
+    return NextResponse.json({ latestEpisodes });
   } catch (error) {
-    console.error('Erro ao processar resposta da API RSS:', error)
+    //biome-ignore lint/suspicious/noConsole: console.error
+    console.error('Erro ao processar resposta da API RSS:', error);
     return NextResponse.json(
-      { error: 'Erro ao processar resposta da API RSS' },
+      {
+        error: `Erro ao processar resposta da API RSS: ${error instanceof Error ? error.message : String(error)}`,
+      },
       { status: 500 }
-    )
+    );
   }
 }
