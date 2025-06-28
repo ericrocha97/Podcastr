@@ -12,8 +12,8 @@
 - [x] chamada api real
 - [x] fav icon e title das paginas
 - [x] pwa **falta testar, pq precisa ser no ambiente
-- [ ] revisar código
-- [ ] deploy
+- [x] revisar código
+- [x] deploy
 
 ## Todo V1
 
