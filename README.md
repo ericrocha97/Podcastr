@@ -28,7 +28,9 @@ Podcastr é um reprodutor de podcasts moderno, construído com Next.js e React, 
 - [TypeScript](https://www.typescriptlang.org/) – Tipagem estática para JavaScript.
 - [Tailwind CSS](https://tailwindcss.com/) – Utilitários CSS para estilização.
 - [Radix UI](https://www.radix-ui.com/) – Componentes de UI acessíveis.
+- [shadcn/ui](https://ui.shadcn.com/) – Componentes de interface reutilizáveis e acessíveis.
 - [Lucide React](https://lucide.dev/) – Ícones SVG modernos.
+- [Rose Pine Theme](https://rosepinetheme.com/) – Tema visual elegante e suave para a interface.
 
 ---
 
