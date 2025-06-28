@@ -2,14 +2,12 @@ import { AllEpisodes } from '@/components/all-episodes';
 import { LastEpisodes } from '@/components/last-episodes';
 import type { Episode } from '@/types/episode';
 
-const TRAILING_SLASH_REGEX = /\/$/;
-
 export default async function Home() {
-  const isServer = typeof window === 'undefined';
-  const baseUrl = isServer
-    ? (process.env.NEXT_PUBLIC_BASE_URL?.replace(TRAILING_SLASH_REGEX, '') ??
-      'http://localhost:3000')
-    : '';
+  const baseUrl =
+    process.env.NEXT_PUBLIC_BASE_URL ||
+    (process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : 'http://localhost:3000');
 
   const [latestEpisodesResponse, allEpisodesResponse] = await Promise.all([
     fetch(`${baseUrl}/api/rss/latest`, {
